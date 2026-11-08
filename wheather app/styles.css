@@ -1,0 +1,251 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(
+        135deg,
+        #fff5e9,
+        #f8c8dc,
+        #dcc6f2
+    );
+
+    color: #493744;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #493744;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d97991;
+}
+
+/* HOME PAGE */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.subtitle {
+    color: #b45d7a;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 6vw, 65px);
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    max-width: 520px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.floating-hearts {
+    font-size: 35px;
+    color: #d97991;
+    animation: float 2s infinite ease-in-out;
+    margin-bottom: 20px;
+}
+
+.small-note {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #8b657b;
+}
+
+/* BUTTONS */
+
+.main-btn {
+    display: inline-block;
+    border: none;
+    background: #d97991;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px #d9799140;
+}
+
+.main-btn:hover {
+    transform: translateY(-5px);
+    background: #b85d7a;
+}
+
+/* MEMORIES PAGE */
+
+.memory-section {
+    text-align: center;
+    padding: 65px 8%;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 850px;
+    margin: 45px auto;
+}
+
+.photo-card {
+    background: #fffaf7;
+    padding: 15px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px #49374415;
+    transition: 0.3s;
+}
+
+.photo-card:hover {
+    transform: translateY(-8px) rotate(-1deg);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.photo-card h3 {
+    font-family: 'Playfair Display', serif;
+    margin: 15px 0 8px;
+}
+
+.photo-card p {
+    font-size: 13px;
+    color: #886e80;
+}
+
+/* LETTER PAGE */
+
+.letter-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.letter-card {
+    background: #fffaf7;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px #49374420;
+    text-align: left;
+    line-height: 2;
+}
+
+.letter-card h1 {
+    font-size: 35px;
+    text-align: center;
+    color: #bd6884;
+}
+
+.letter-card p {
+    margin: 20px 0;
+}
+
+.letter-card h2 {
+    margin-top: 30px;
+    color: #bd6884;
+    font-family: 'Playfair Display', serif;
+}
+
+.letter-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: normal;
+}
+
+/* FINAL MESSAGE */
+
+.final-message {
+    margin: 30px auto;
+    max-width: 500px;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    color: #b85d7a;
+}
+
+/* ANIMATION */
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 650px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-card img {
+        height: 250px;
+    }
+
+    .letter-card {
+        padding: 25px;
+    }
+
+}
